@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+body{
+    background-color: rgb(50, 131, 238);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background-color: aliceblue;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;;
+    box-shadow: 0 10px 15px black;
+}
+
+
+.texto-perfil{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.texto-perfil h2{
+    color: white;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height:1.4em ;
+}
+
+.texto-perfil h2 span{
+font-size: 0.8em;
+font-weight: 300;
+}
+.img-box{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 30%;
+    overflow: hidden;
+}
+
+#imgBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
+}
+
+.informacoes-contato{
+    padding-top: 40px;
+}
+
+.titulo{
+  color: white;  
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+
+}
+
+.informacoes-contato ul{ 
+position: relative;
+
+
+}
+.informacoes-contato ul li{ 
+position: relative;    
+list-style: none;
+margin: 10px 0;
+cursor: pointer;
+}
+
+.informacoes-contato ul li .icone{ 
+
+display: inline-block;
+width: 30px;
+font-size: 15px;
+color: #03a9f4;
+
+}
+
+.informacoes-contato ul li span{
+color: #ffff;
+font-size: 10.1pt;
+font-weight: 300;
+
+}
+
+.informacoes-contato.educacao li{
+    margin-bottom: 25px;
+}
+
+.informacoes-contato.educacao h5{
+   color: #03a9f4;
+   font-weight: 500;
+}
+
+.informacoes-contato.educacao h4:nth-child(2)
+{
+    color: white;
+    font-weight: 500;
+ }
+
+ 
+.informacoes-contato.educacao h4{
+    color: white;
+    font-weight: 300;
+ }
+
+ .informacoes-contato.idioma .porcentagem{
+    position: relative;
+    width: 100%;
+    height: 7px;
+    background-color: #1a252b;
+    display: block;
+    margin-top: 8px;
+
+ }
+
+ .informacoes-contato.idioma .porcentagem div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #03a9f4;
+
+ }
+
+
+
+.left{
+position: relative;
+background-color: #003147;
+padding: 40px;
+}
+
+
+/*LADO DIREITO*/
+
+.right{
+position: relative;
+background-color: #ffff;
+padding: 40px;
+}
+
+.sobre{
+margin-bottom: 50px;
+}
+
+.sobre:last-child{
+    margin-bottom: 0;
+}
+
+.titulo2{
+    color: #003147;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+p{
+    color: #333;
+}
+
+.sobre .box{
+    display: flex ;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.sobre .box .ano-empresa{
+min-width: 160px;
+}
+
+.sobre .box .ano-empresa h5{
+    text-transform: uppercase;
+    color: rgb(82, 81, 81);
+    font-weight: 600;
+}
+.sobre .box .texto-empresa{
+color: #2a7da2;
+font-size: 15px;
+}
+
+.habilidades .box{
+position: relative;
+width: 100%;
+display: grid;
+grid-template-columns: 160px 1fr;
+justify-content: center;
+align-items: center;
+padding-bottom: 15px;
+
+}
+
+.habilidades .box h4{
+    text-transform: uppercase;
+    color: rgb(82, 81, 81);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.habilidades .box .porcentagem{
+    position: relative;
+    width: 100%;
+    height: 13px;
+    background-color: rgb(202, 199, 199);
+    border-radius: 8px;
+}
+
+.habilidades .box .porcentagem div{
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+background-color: #03a9f4;
+border-radius: 8px
+}
+
+.area-interesse ul{
+   display: grid;
+   
+}
+
+.area-interesse ul li{
+    margin: 10px 1px;
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    
+}
+
+.area-interesse ul li .fa{
+    color: #03a9f4;
+    font-size: 18px;
+    width: 20px;
+    
+}
+
+@media(max-width:1000px){
+    .container{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .area-interesse ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media(max-width:600px){
+.sobre .box{
+    flex-direction: column;
+}
+.sobre .box .ano-empresa{
+    min-width: 150px;
+    margin-bottom: 5px;
+}
+
+.habilidades .box{
+    grid-template: repeat(2,1fr);
+}
+}
